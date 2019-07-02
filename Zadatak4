@@ -1,0 +1,30 @@
+package paket1;
+
+import java.util.Scanner;
+
+public class Zadatak1broj {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Upisi vrednost n: ");
+
+		if (input.nextInt() >= 0){
+
+		    niz.add(input.nextInt());
+
+		}
+
+		else {
+
+		    System.out.println("Ulaz: ");
+		    for (int i = 0; i <= niz.size(); i++) {
+		        
+		        System.out.println(" " + niz.get(i));
+		        y = y + niz.get(i);
+		        
+		    }
+		            System.out.println("Izlaz: " + y);
+
+	}
+
+}
