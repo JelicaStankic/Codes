@@ -1,0 +1,59 @@
+package nizovi;
+
+public class Zadatak1Kraljica {
+
+	
+		 boolean sah(int i , int j , int x, int y){
+
+
+			if ( i == x || j == y ) {
+			System.out.println("NOMNOM");
+			return true;
+			}
+
+			else {
+
+
+			for(int k = i , l = j; k < 8 ; k++, l++) {
+			if (k == x && l == y ) {
+			System.out.println("NOMNOM");
+			return true;
+			}
+
+			}
+
+			for(int k = i , l = j; k < 8 ; k--, l--) {
+			if (k == x && l == y ) {
+			System.out.println("NOMNOM");
+			return true;
+			}
+
+			}
+
+			for(int k = i , l = j; k < 8 ; k++, l--) {
+			if (k == x && l == y ) {
+			System.out.println("NOMNOM");
+			return true;
+			}
+
+			}
+
+
+			for(int k = i , l = j; k < 8 ; k--, l++) {
+			if (k == x && l == y ) {
+			System.out.println("NOMNOM");
+			return true;
+			}
+
+			}
+
+			} 
+
+
+			System.out.println("NE");
+			return false;
+
+		 
+	}
+
+}
