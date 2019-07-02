@@ -1,0 +1,27 @@
+package funkcije;
+
+import java.util.Scanner;
+
+public class Zadatak1 {
+
+	public static void main(String[] args) {
+		System.out.println("zbirN()"); }
+	
+	public static int zbirN() {
+		System.out.println("Unesite neki broj:");
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt(), broj, suma=0;
+		System.out.println("Unesite" + n + "brojeva");
+		
+		for(int i=0; i<n; i++) {
+			broj=sc.nextInt();
+			suma+=broj;
+			
+		}
+		
+	return suma;
+		
+
+	}
+
+}
