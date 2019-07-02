@@ -1,0 +1,37 @@
+package funkcije;
+
+import java.util.Scanner;
+
+public class Zadatak1A {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Unesi visecifreni prirodan broj: ");
+		
+		int n = sc.nextInt();
+		int pom; 
+		int sumP = 0; 
+		int sumN = 0; 
+		
+	if (n<9) {
+			System.out.println(" Uneli ste pogresan broj"); 
+			return;
+		}
+		
+		
+		else {
+			while (n>0) { 
+				
+				pom=n%10; 
+				n=n/10;
+				if (pom%2==0) sumP+=pom; 
+				if (pom%2!=0) sumN+=pom; 
+				
+							
+			}	System.out.println(sumP+ " - " +sumN);
+		
+
+	}
+
+	}}
