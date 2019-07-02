@@ -1,0 +1,27 @@
+package klase;
+
+public class Vozac { 
+	private int id;
+	private String ime;
+	public static int idGlobal = 1;
+	
+	public Vozac(String ime) {
+		this.ime = ime;
+		this.id = idGlobal;
+		idGlobal++;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getIme() {
+		return ime;
+	}
+	public String ispis() {
+		return "[" + id + "]" + ime;
+	}
+	@Override
+	public String toString() {
+		return "[" + id + "]" + ime;
+	}
+
+}
