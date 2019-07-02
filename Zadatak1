@@ -1,0 +1,26 @@
+package paket1;
+
+import java.util.Scanner;
+
+public class Zadatak2 {
+
+	public static void main(String[] args) {
+		   
+		Scanner input = new Scanner(System.in);
+		
+			  System.out.print("Upisi x: "); 
+			  
+			  int x = input.nextInt(); 
+			
+			  
+			  System.out.print("Upisi y: "); 
+			  int y = input.nextInt();
+			  
+			  int z = 34*y + x/59;
+			  System.out.print("Rezultat je " + z + " "); 
+			   
+			  }
+
+	}
+
+
