@@ -1,0 +1,20 @@
+package klase;
+
+public class Zadatak1 {
+
+	public static void main(String[] args) {
+		Pravougaonik p = new Pravougaonik();
+
+		p.setStraniceAiB(3, 5);
+
+		System.out.println("Stranica A je sad: " + p.getStranicaA());
+
+		System.out.println("Stranica B je sad: " + p.getStranicaB());
+
+		System.out.println("Povrsina je: " + p.izracunajPovrsinu());
+
+		System.out.println("Obim je: " + p.izracunajObim());
+
+	}
+
+}
