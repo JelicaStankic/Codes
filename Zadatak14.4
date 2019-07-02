@@ -1,0 +1,37 @@
+package domaci;
+
+public class Putnik extends Covek {
+
+	
+	private float novac;
+
+	public Putnik (String ime, int tezina, int jib, float novac) {
+	super(ime, tezina, jib);
+	this.novac = novac;
+	}
+
+	public String dodajNovac(int cifra){
+	novac = novac + cifra;
+	return "novac dodat";
+	}
+
+	public String oduzmiNovac(int cifra){
+	novac = novac - cifra;
+	return "novac oduzet";
+	}
+	
+	
+	public float vratiNovac(){
+		
+		return novac;
+		}
+	
+	
+
+	public void ispisiPutnika(){
+	System.out.println("Putnik " + novac + " " + super.vratijib() + " " + super.vratiCoveka() + ": " + super.vratiTezinu());
+	}
+	
+
+	
+}
