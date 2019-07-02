@@ -1,0 +1,34 @@
+package klase;
+
+public class Pravougaonik {
+	private int stranicaA;
+	private int stranicaB;
+
+	public Pravougaonik() {
+
+		stranicaA = 0;
+		stranicaB = 0;
+	}
+
+	public int getStranicaA() {
+		return stranicaA;
+	}
+
+	public int getStranicaB() {
+		return stranicaB;
+	}
+
+	public void setStraniceAiB(int a, int b) {
+		stranicaA = a;
+		stranicaB = b;
+	}
+
+	public int izracunajPovrsinu() {
+		return stranicaA * stranicaB;
+	}
+
+	public int izracunajObim() {
+		return 2 * stranicaA + 2 * stranicaB;
+	}
+
+}
