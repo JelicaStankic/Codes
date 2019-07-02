@@ -1,0 +1,41 @@
+package klase;
+
+import java.util.Scanner;
+
+public class Tim {
+	private String naziv;
+	private Vozac[] vozaci = new Vozac[2];
+
+	private Tim(String naziv) {
+		this.naziv = naziv;
+	}
+
+	public static Tim ucitaj() {
+		Scanner sc = new Scanner(System.in);
+		String naziv = " ";
+		System.out.println("Unesite ime tima: ");
+		naziv = sc.nextLine();
+		return new Tim(naziv);
+	}
+
+	public void dodajVozaca1(Vozac vozac) {
+		this.vozaci[0] = vozac;
+	}
+
+	public void dodajVozaca2(Vozac vozac) {
+		this.vozaci[1] = vozac;
+	}
+
+	public String getnaziv() {
+		return this.naziv;
+	}
+
+	public Vozac getVozaca1() {
+		return this.vozaci[0];
+	}
+
+	public Vozac getVozac2() {
+		return this.vozaci[1];
+	}
+
+}
