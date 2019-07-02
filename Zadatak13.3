@@ -1,0 +1,47 @@
+package klase;
+
+import java.util.Scanner;
+
+public class Zadatak1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Unesite broj timova: ");
+		int brojTimova = sc.nextInt();
+		Tim[] timovi = new Tim[brojTimova];
+
+		for (int i = 0; i < timovi.length; i++) {
+			System.out.println("Tim broj " + (i + 1));
+			timovi[i] = Tim.ucitaj();
+			int broj = 0;
+			System.out.println("Unesite broj vozaca za tim broj " + (i + 1) + ":");
+			broj = sc.nextInt();
+			sc.nextLine();
+			System.out.println("Unesite ime prvog vozaca za tim broj " + (i + 1) + ":");
+			String imePrvog = sc.nextLine();
+			timovi[i].dodajVozaca1(new Vozac(imePrvog));
+			if (broj == 2) {
+				System.out.println("Unesite ime drugog vozaca za tim broj " + (i + 1) + ":");
+			}
+			System.out.println("Tim broj " + (i + 1));
+			timovi[i] = Tim.ucitaj();
+
+
+			timovi[i].dodajVozaca1(new Vozac(imePrvog));
+			if (broj == 2) {
+				System.out.println("Unesite ime drugog vozaca za tim broj " + (i + 1) + ":");
+				String imeDrugog = sc.nextLine();
+				timovi[i].dodajVozaca2(new Vozac(imeDrugog));
+				
+			}
+		}
+	
+	for(int i = 0; i<timovi.length; i++) {
+		System.out.println(timovi[i].getnaziv());
+		System.out.println(timovi[i].getVozaca1());
+		if (timovi[i].getVozac2() !=null) {
+			System.out.println(timovi[i].getVozac2());
+		}
+	}
+
+	}}
