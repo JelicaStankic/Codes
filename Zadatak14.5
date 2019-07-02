@@ -1,0 +1,23 @@
+package domaci;
+
+public class Vozac extends Covek {
+	
+	
+	public Vozac (String ime1, int tezina1, int jib1, String titula)
+	{
+	
+		super (ime1, tezina1, jib1);
+		this.titula = titula;
+	}
+	
+	private String titula;
+	
+	public void ispisiSofera(){
+	
+		System.out.println("Sofer " + super.vratiCoveka() + " " + super.vratiTezinu());
+
+	}
+
+	}
+	
+
