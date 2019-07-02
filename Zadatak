@@ -1,0 +1,22 @@
+package paket1;
+
+import java.util.Scanner;
+
+public class ZadatakKamataKrediti {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter iznos kredita: "); 
+		double iznosKredita = sc.nextInt(); 
+
+		System.out.print("Enter Kamata: "); 
+		double kamata = sc.nextInt();
+
+		double kolicinaNovca = iznosKredita *( 1+ 0.001 * kamata); 
+		System.out.print("kolicinaNovca is " + kolicinaNovca + " "); 
+		 
+
+	}
+
+}
