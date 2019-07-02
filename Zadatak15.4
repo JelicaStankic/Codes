@@ -1,0 +1,78 @@
+package domaci;
+
+public abstract class Vozilo {
+	
+
+	private String registracionibroj;
+	private int velicinaRezervoara;
+	private int trenutnoGorivo;
+	private int potrosnja;
+	
+	
+	public int getPotrosnja() {
+		return potrosnja;
+	}
+
+
+
+	public void dodajGorivo(int vrednost){
+		
+		
+		trenutnoGorivo = trenutnoGorivo + vrednost;
+		
+	}
+
+	
+	public void oduzmiGorivo(int vrednost){
+		
+		
+		trenutnoGorivo = trenutnoGorivo - vrednost;
+		
+	}
+	
+
+	public Vozilo(int velicinaRezervoara , int potrosnja) {
+		this.velicinaRezervoara = velicinaRezervoara;
+		this.potrosnja = potrosnja;
+		
+	}
+
+	public String getRegistracionibroj() {
+		return registracionibroj;
+	}
+
+	public void setRegistracionibroj(String registracionibroj) {
+		this.registracionibroj = registracionibroj;
+	}
+	
+	private String serijskiBroj;
+
+	public String getSerijskiBroj() {
+		return serijskiBroj;
+	}
+
+	public void setSerijskiBroj(String serijskiBroj) {
+		this.serijskiBroj = serijskiBroj;
+	}
+
+	
+	public int getVelicinaRezervoara() {
+		return velicinaRezervoara;
+	}
+
+
+
+	public int getTrenutnoGorivo() {
+		return trenutnoGorivo;
+	}
+
+	public void setTrenutnoGorivo(int trenutnoGorivo) {
+		this.trenutnoGorivo = trenutnoGorivo;
+	}
+
+
+	public abstract double dometVozila(int zadatiBrojKM);
+	
+
+
+}
