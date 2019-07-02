@@ -1,0 +1,81 @@
+package domaci;
+
+public class Autobus {
+
+	private String naziv;
+	private Vozac soferAutobusa;
+	private int cenaKarte;
+	int brojPutnika;
+	Putnik[] listaPutnika;
+
+	public Autobus (Vozac vozac , int cenaKarte, int BrojPutnika){
+
+	soferAutobusa = vozac;
+	this.cenaKarte = cenaKarte;
+	this.brojPutnika = BrojPutnika;
+	listaPutnika = new Putnik[brojPutnika];
+	}
+
+	public boolean dodajPutnika (int brojSedista, Putnik putnik){
+
+	if(brojSedista < brojPutnika){
+	if (listaPutnika[brojSedista] != null){
+	listaPutnika[brojSedista] = putnik;
+	return true;
+	}
+	else { return false; }
+	}
+	else {return false;}
+	}
+
+
+	public String izbaciPutnikaSaSedista (int brojSedista, Putnik putnik){
+
+	if(brojSedista < brojPutnika){
+	if (listaPutnika[brojSedista] != null){
+	listaPutnika[brojSedista] = null;
+	return "Putnik je izbacen";
+	}
+	else{ return "Mesto je vec prazno"; }
+	}
+
+	else {return "To mesto ne postoji";}
+	}
+
+
+	public String DodajVozaca (Vozac vozac){
+	this.soferAutobusa = vozac;
+	return "Vozac dodat";
+	}
+
+	public String UkloniVozaca (Vozac vozac){
+	this.soferAutobusa = null;
+	return "Vozac skinut";
+	}
+
+
+	public void naplatiKarte(){
+
+	if (soferAutobusa == null)
+	{
+		System.out.println( "Vozac nije prisutan ne mozemo da vam naplatimo karte");
+	}
+
+	else{
+	for(int i=0; i>listaPutnika.length; i++ ) {
+
+	if (listaPutnika[i].vratiNovac() > cenaKarte)
+	{
+	listaPutnika[i].oduzmiNovac(cenaKarte);
+	System.out.println("Putniku" + listaPutnika[i].vratiCoveka() + "karta naplacena");
+
+	}
+	else {izbaciPutnikaSaSedista(brojPutnika, listaPutnika[i]);
+	
+	System.out.println("Putniku" + listaPutnika[i].vratiCoveka() + "karta nije naplacena");
+	}
+	}}
+
+	}
+		
+}
