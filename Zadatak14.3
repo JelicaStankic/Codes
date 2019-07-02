@@ -1,0 +1,43 @@
+package domaci;
+
+import domaci.Covek;
+
+public class Glavni {
+	
+	
+	public static void main(String args[]) {
+		
+		
+		// zadatak 1
+		
+		int n=6;
+		double cena=100;
+		Covek c = new Covek("jelica", 10, 10);
+		
+		Vozac v = new Vozac("Jelica", 10, 50, "car");
+		Autobus a= new Autobus(v,100,50);
+		Putnik p1= new Putnik("Uros",50,50,100.5f);
+		Putnik p2= new Putnik("Vlada",50,100,100.5f);
+		Putnik p3= new Putnik("Ana",150,400, 56f);
+		a.DodajVozaca(v);
+		
+		
+		dodavanjePutnika(a.dodajPutnika(0,p1));
+		dodavanjePutnika(a.dodajPutnika(1,p2));
+		dodavanjePutnika(a.dodajPutnika(2,p3));
+		
+		a.naplatiKarte();
+		System.out.println(a);
+		p2.dodajNovac(200);
+		dodavanjePutnika(a.dodajPutnika(4, p2));
+		a.naplatiKarte();
+		System.out.println(a);
+		
+		
+		
+	}
+	private static void dodavanjePutnika(boolean rez) {
+		System.out.println((rez?"Uspesno":"Neuspesno")+" dodat" );
+	}
+
+}
