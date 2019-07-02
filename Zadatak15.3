@@ -1,0 +1,22 @@
+package domaci;
+
+public class TeretnoVozilo extends Vozilo {
+	
+	
+public TeretnoVozilo (int velicinaRezervoara , int potrosnja) {
+		
+		super(velicinaRezervoara,potrosnja);
+		
+	}
+
+	@Override
+	public double dometVozila(int zadatiBrojKM) {
+		
+		return (3.1 *super.getPotrosnja()) * zadatiBrojKM;
+		
+	}
+
+	
+	
+	
+}
