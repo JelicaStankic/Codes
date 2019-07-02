@@ -1,0 +1,34 @@
+package nizovi;
+
+import java.util.Scanner;
+
+public class Zadatak1Niz {
+	public static void main(String[] args) {
+	
+	
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" Unesite n: ");
+		int n = sc.nextInt();
+		int[] niz = new int[n];
+		int k=sc.nextInt(); 
+		
+
+		int suma = 0;
+		for (int i = 0; i < niz.length; i++) {
+
+		if (niz[i] % k == 0) {
+		suma = suma + niz [i];
+
+		}
+
+		}
+
+
+		return suma;
+		}
+
+		
+	}
+		
+
+
