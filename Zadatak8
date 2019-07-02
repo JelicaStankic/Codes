@@ -1,0 +1,36 @@
+package funkcije;
+
+import java.util.Scanner;
+
+public class Zadatak1AA {
+
+	public static void main(String[] args) {
+		System.out.print(fkt());
+
+	}
+
+	public static int fkt() {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Unesi br n");
+		int n = sc.nextInt();
+		System.out.println("Unesi br k");
+		int k = sc.nextInt();
+		int rezultatN = 1; 
+		int rezultatK = 1;
+		int proizvod = 1; 
+
+		for (int i = 1; i <= n; i++) {
+			rezultatN *= i; 
+		}
+		for (int j = 1; j <= k; j++) {
+			rezultatK *= j; 
+		}
+		proizvod = rezultatN * rezultatK; 
+		return proizvod; 
+	}
+
+	}
+
+
