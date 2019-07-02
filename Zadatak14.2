@@ -1,0 +1,47 @@
+package domaci;
+
+public class Covek {
+	
+	private String ime;
+	private int tezina;
+	private int jib = 0;
+
+
+	public Covek (String ime, int tezina, int jib) {
+	this.ime = ime;
+	this.tezina = tezina;
+	this.jib = jib;
+	}
+
+
+	public String vratiCoveka(){
+	return ime;
+	}
+
+	public void setujCoveka(String ime){
+	this.ime = ime;
+	}
+
+	public int vratiTezinu(){
+	return tezina;
+	}
+
+	public void setujTezinu(int tezina){
+	this.tezina = tezina;
+	}
+	
+	public int vratijib(){
+		return jib;
+		}
+
+	public String ispisiCoveka(){
+	System.out.println(jib + " " + ime + ":" + tezina);
+	
+	return ime + " " + tezina;	}
+
+}
+
+
+	
+	
+
